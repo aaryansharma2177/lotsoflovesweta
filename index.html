@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heart Form with Background Image</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/509350436/photo/first-date.jpg?s=612x612&w=0&k=20&c=3GFzhTooOaDdJn0g1nxnHbYCC65koR3JKKh1PQk68JM='); /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .heart-form {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .heart-form p {
+    margin: 0;
+  }
+  
+  .heart-form .second-text {
+    display: none;
+  }
+  
+  .heart-form.active .second-text {
+    display: block;
+  }
+  
+  .heart-form.active .first-text {
+    display: none;
+  }
+  
+  .button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="heart-form" id="heartForm">
+    <p class="first-text">𝐇𝐈 ! 𝐒𝐖𝐄𝐓𝐀 𝐂𝐋𝐈𝐂𝐊 𝐌𝐄 ❤️</p>
+    <p class="second-text">❝𝐈𝐅 𝐋𝐎𝐕𝐄 𝐈𝐒 𝐓𝐇𝐄  𝐁𝐄𝐒𝐓 𝐌𝐄𝐃𝐈𝐂𝐈𝐍𝐄 𝐓𝐇𝐄𝐍 𝐘𝐎𝐔'𝐑𝐄 𝐌𝐘 𝐃𝐀𝐈𝐋𝐘 𝐃𝐎𝐒𝐄 - 𝐅𝐎𝐑 𝐒𝐖𝐄𝐄𝐓 𝐒𝐖𝐄𝐓𝐀❤️❞
+    </p>
+  </div>
+</div>
+<script src="vercel.json"></script>
+<script>
+  document.getElementById('heartForm').addEventListener('click', function() {
+    this.classList.toggle('active');
+    setTimeout(function() {
+      document.getElementById('heartForm').classList.toggle('active');
+    }, 5000); // 5000 milliseconds = 5 seconds
+  });
+</script>
+
+</body>
+</html>
